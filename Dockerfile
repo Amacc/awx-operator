@@ -1,4 +1,5 @@
-FROM quay.io/operator-framework/ansible-operator:v1.12.0
+ARG OPERATOR_BASE_IMAGE=quay.io/operator-framework/ansible-operator:v1.12.0
+FROM ${OPERATOR_BASE_IMAGE}
 
 ARG DEFAULT_AWX_VERSION
 ENV DEFAULT_AWX_VERSION=${DEFAULT_AWX_VERSION}
